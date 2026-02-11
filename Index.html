@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Princess 💖</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9ecf, #ffcce6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#message {
+    height: 40px;
+    font-size: 1.2rem;
+    color: #7a004f;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    position: relative;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#yesBtn {
+    background-color: #ff2e7e;
+    color: white;
+    margin-right: 20px;
+}
+
+#noBtn {
+    background-color: #333;
+    color: white;
+    position: absolute;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Will you be my valentine princess? 💖</h1>
+<div id="message"></div>
+
+<div class="buttons">
+    <button id="yesBtn">Yes 💍</button>
+    <button id="noBtn">No 😢</button>
+</div>
+
+<canvas id="confetti"></canvas>
+
+<script>
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const message = document.getElementById("message");
+const body = document.body;
+
+let size = 1;
+let noCount = 0;
+
+const sadMessages = [
+"So basically you don't love me anymore? 💔",
+"😔",
+"Wow… that actually hurt.",
+"Are you sure princess? 🥺",
+"I even rehearsed this moment...",
+"My heart just cracked a little 💔",
+"You’re breaking my soft boy era 😭",
+"Okay now this is getting personal.",
+"I might cry fr.",
+"This is emotional damage."
+];
+
+noBtn
